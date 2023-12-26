@@ -1,0 +1,85 @@
+version: api.keploy.io/v1beta1
+name: report-1
+status: PASSED
+success: 1
+failure: 0
+total: 1
+tests:
+    - kind: Http
+      name: report-1
+      status: PASSED
+      started: 1703608977
+      completed: 1703608977
+      test_case_path: /mnt/d/Code/GolangProjects/keploy-test/keploy/test-set-0
+      mock_path: ""
+      test_case_id: test-1
+      req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/ping
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: localhost:8080
+            Postman-Token: c56301fe-a617-40f2-b896-dad4a28c820f
+            User-Agent: PostmanRuntime/7.36.0
+        body: ""
+        body_type: ""
+        timestamp: 0001-01-01T00:00:00Z
+        host: ""
+      resp:
+        status_code: 200
+        header:
+            Content-Length: "4"
+            Content-Type: text/plain; charset=utf-8
+            Date: Tue, 26 Dec 2023 16:42:31 GMT
+        body: pong
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 0001-01-01T00:00:00Z
+      noise:
+        header.Date: []
+      result:
+        status_code:
+            normal: true
+            expected: 200
+            actual: 200
+        headers_result:
+            - normal: true
+              expected:
+                key: Date
+                value:
+                    - Tue, 26 Dec 2023 16:42:31 GMT
+              actual:
+                key: Date
+                value:
+                    - Tue, 26 Dec 2023 16:42:57 GMT
+            - normal: true
+              expected:
+                key: Content-Length
+                value:
+                    - "4"
+              actual:
+                key: Content-Length
+                value:
+                    - "4"
+            - normal: true
+              expected:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+              actual:
+                key: Content-Type
+                value:
+                    - text/plain; charset=utf-8
+        body_result:
+            - normal: true
+              type: PLAIN
+              expected: pong
+              actual: pong
+        dep_result: []
+test_set: test-set-0

@@ -1,0 +1,47 @@
+version: api.keploy.io/v1beta1
+kind: Http
+name: test-1
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:8080/ping
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Host: localhost:8080
+            Postman-Token: c56301fe-a617-40f2-b896-dad4a28c820f
+            User-Agent: PostmanRuntime/7.36.0
+        body: ""
+        body_type: ""
+        timestamp: 2023-12-26T22:12:31.77451994+05:30
+        host: ""
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "4"
+            Content-Type: text/plain; charset=utf-8
+            Date: Tue, 26 Dec 2023 16:42:31 GMT
+        body: pong
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+        timestamp: 2023-12-26T22:12:33.775418616+05:30
+    objects: []
+    assertions:
+        noise:
+            header.Date: []
+    created: 1703608953
+curl: |
+    curl --request GET \
+      --url http://localhost:8080/ping \
+      --header 'Host: localhost:8080' \
+      --header 'Accept-Encoding: gzip, deflate, br' \
+      --header 'Connection: keep-alive' \
+      --header 'User-Agent: PostmanRuntime/7.36.0' \
+      --header 'Accept: */*' \
+      --header 'Postman-Token: c56301fe-a617-40f2-b896-dad4a28c820f' \
